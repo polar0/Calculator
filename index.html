@@ -13,38 +13,61 @@
     <div id="calculator">
       <div class="screen">
         <div class="container">
-          <div id="calcul"></div>
+          <div id="calcul"><span></span></div>
         </div>
-        <div id="result">0</div>
+        <div class="container"><div id="result">0</div></div>
+        <div id="error">&nbsp;</div>
       </div>
 
       <div class="buttons">
         <button class="util" value="reset">C</button>
-        <button class="operator" value="pow">POW</button>
-        <button class="operator" value="sqrt">SQRT</button>
-        <button class="operator" name="divide" value="/">%</button>
+        <div class="decimals-container">
+          <div class="title util">Decimals</div>
+          <div class="decimals-value">
+            <button class="util" id="decimals-down">-</button>
+            <div id="get-decimals-value" class="number">2</div>
+            <button class="util" id="decimals-up">+</button>
+          </div>
+        </div>
+        <div class="double-button">
+          <input
+            type="button"
+            class="operator left"
+            id="pow"
+            value="pow"
+            disabled
+          />
+          <input type="button" class="operator right" id="sqrt" value="sqrt" />
+        </div>
+        <button class="operator" value="/">%</button>
 
         <button class="number" value="7">7</button>
         <button class="number" value="8">8</button>
         <button class="number" value="9">9</button>
-        <button class="operator" name="multiply" value="x">x</button>
+        <button class="operator" value="x">x</button>
 
         <button class="number" value="4">4</button>
         <button class="number" value="5">5</button>
         <button class="number" value="6">6</button>
-        <button class="operator" name="substract" value="-">-</button>
+        <button class="operator" value="-">-</button>
 
         <button class="number" value="1">1</button>
         <button class="number" value="2">2</button>
         <button class="number" value="3">3</button>
-        <button class="operator" name="add" value="+">+</button>
+        <button class="operator" value="+">+</button>
 
-        <button class="util" value="return">Return</button>
+        <button class="util" value="delete">Delete</button>
         <button class="number" value="0">0</button>
         <button class="number" value=".">.</button>
-        <button class="util" name="result" value="=">=</button>
+        <button class="util" value="result">=</button>
       </div>
-      <div class="caption"></div>
+      <div class="caption">
+        <div class="pow">
+          <input id="base" placeholder="Enter base" />
+          <input id="exponent" placeholder="Enter exponent" />
+          <button id="pow-enter" class="util">Enter</button>
+        </div>
+      </div>
     </div>
     <div class="footer"></div>
   </body>
