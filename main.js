@@ -285,8 +285,6 @@ function getResult(operation, numA, numArray, ...tempOperation) {
     operation = tempOperation;
   }
 
-  console.log(operation, numA, numB);
-
   if (operation.value === '+') {
     return addNumbers(numA, numB);
   } else if (operation.value === '-') {
